@@ -3,732 +3,631 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timothy Sharp - Professional Case Studies</title>
+    <title>Business Case Studies | Timothy Sharp</title>
     <style>
         :root {
-            --primary-color: #0a66c2;
-            --secondary-color: #0073b1;
-            --accent-color: #f5f5f5;
-            --light-bg: #f3f2ef;
-            --dark-bg: #283e4a;
-            --text-light: #ffffff;
-            --text-dark: #333333;
-            --border-color: #e0e0e0;
+            --primary: #0a66c2;
+            --primary-light: #e8f3ff;
+            --secondary: #5e5e5e;
+            --light: #f3f2ef;
+            --dark: #191919;
+            --success: #057642;
+            --success-light: #ebf7f2;
+            --gray-light: #f5f5f5;
+            --border-radius: 6px;
         }
         
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         
         body {
-            line-height: 1.5;
-            color: var(--text-dark);
-            background-color: var(--light-bg);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            margin: 0;
+            padding: 20px;
         }
         
         .container {
-            width: 90%;
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: white;
-            color: var(--text-dark);
-            padding: 20px 0;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .header-content h1 {
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 25px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: var(--primary-color);
-        }
-        
-        .main-content {
-            padding: 40px 0;
-        }
-        
-        .profile-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        
-        .cover-photo {
-            height: 500px;
-            background-color: #65b4ff;
-            background-image: ;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        
-        .profile-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 5px solid white;
-            position: absolute;
-            bottom: -60px;
-            left: 30px;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: #888;
-        }
-        
-        .profile-info {
-            padding: 80px 30px 30px;
-        }
-        
-        .profile-info h2 {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-        }
-        
-        .profile-info p.headline {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 15px;
-        }
-        
-        .profile-info p.location {
-            font-size: 0.9rem;
-            color: #777;
-            margin-bottom: 20px;
-        }
-        
-        .section-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .section-title h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-        
-        .section-title a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .experience-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            padding: 25px;
-        }
-        
-        .experience-header {
-            display: flex;
-            margin-bottom: 15px;
-        }
-        
-        .company-logo {
-            width: 60px;
-            height: 60px;
-            background-color: #f5f5f5;
-            border-radius: 8px;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #555;
-        }
-        
-        .experience-company h4 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-        
-        .experience-company p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 5px;
-        }
-        
-        .experience-company p.duration {
-            font-size: 0.85rem;
-            color: #777;
-        }
-        
-        .experience-details {
-            margin-top: 20px;
-        }
-        
-        .experience-description {
-            margin-bottom: 20px;
-        }
-        
-        .experience-description p {
-            margin-bottom: 10px;
-        }
-        
-        .experience-description ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        
-        .experience-description ul li {
-            margin-bottom: 5px;
-        }
-        
-        .skills-used {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-        
-        .skill-tag {
-            background-color: var(--accent-color);
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            margin-right: 8px;
-            margin-bottom: 8px;
-        }
-        
-        .results-section {
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .results-section h5 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-        
-        .project-gallery {
-            margin-top: 25px;
-        }
-        
-        .gallery-title {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-        }
-        
-        .gallery-item {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-            cursor: pointer;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .testimonial {
-            background-color: var(--accent-color);
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 25px;
-            position: relative;
-        }
-        
-        .testimonial::before {
-            content: """;
-            font-size: 3rem;
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            color: var(--primary-color);
-            opacity: 0.2;
-        }
-        
-        .testimonial p {
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        
-        .testimonial-author {
-            text-align: right;
-            font-weight: 500;
-        }
-        
-        .visualization {
-            margin-top: 25px;
             background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 30px;
         }
         
-        .viz-title {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
+        h1 {
+            color: var(--primary);
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
         }
         
-        .viz-container {
-            width: 100%;
-            height: 300px;
-            background-color: var(--accent-color);
+        h1:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+        
+        .case-study {
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .case-study:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .case-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .case-number {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-weight: 600;
+            margin-right: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
-        footer {
-            background: white;
-            padding: 30px 0;
-            margin-top: 40px;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+        .case-title-container {
+            flex: 1;
         }
         
-        .footer-content {
+        .case-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .case-subtitle {
+            color: var(--secondary);
+            font-size: 16px;
+            font-style: italic;
+        }
+        
+        .case-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .business-case-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            padding: 12px 15px;
+            font-weight: 600;
+            font-size: 16px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .section-content {
+            padding: 15px;
+            font-size: 15px;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .outcome-section {
+            grid-column: span 2;
+        }
+        
+        .outcome-header {
+            background-color: var(--success-light);
+            color: var(--success);
+            border-left: 4px solid var(--success);
+        }
+        
+        .outcome-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .outcome-metric {
+            padding: 10px;
+            background-color: var(--gray-light);
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .outcome-metric:before {
+            content: "✓";
+            position: absolute;
+            left: 10px;
+            color: var(--success);
+        }
+        
+        .visual-container {
+            margin-top: 25px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .visual-header {
+            padding: 12px 15px;
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .visual-title {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .visual-content {
+            padding: 20px;
+            background-color: white;
+        }
+        
+        /* Path to Market Visualization */
+        .flow-chart {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            padding: 15px 0;
         }
         
-        .footer-links a {
-            color: var(--text-dark);
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 0.9rem;
+        .flow-item {
+            flex: 1;
+            padding: 12px 8px;
+            margin: 0 5px;
+            text-align: center;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 1;
+            font-size: 14px;
         }
         
-        .footer-links a:hover {
-            color: var(--primary-color);
+        .flow-line {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background-color: #ddd;
+            z-index: 0;
         }
         
-        .copyright {
-            font-size: 0.85rem;
-            color: #777;
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
         }
         
+        .comparison-table th {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            text-align: left;
+            padding: 10px 12px;
+            font-weight: 600;
+            border: 1px solid #ddd;
+            font-size: 15px;
+        }
+        
+        .comparison-table td {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+            font-size: 14px;
+        }
+        
+        /* AI Model Visualization */
+        .model-container {
+            margin: 10px 0;
+        }
+        
+        .model-section {
+            margin-bottom: 20px;
+        }
+        
+        .model-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .model-label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .model-items {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        
+        .model-item {
+            flex: 1;
+            padding: 10px 8px;
+            text-align: center;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .model-engine {
+            background-color: var(--primary-light);
+            border-color: var(--primary);
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .model-arrow {
+            text-align: center;
+            margin: 8px auto;
+            font-size: 18px;
+            color: var(--secondary);
+        }
+        
+        .learning-initiative {
+            background-color: #f8f9fa;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-top: 50px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .learning-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .learning-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: 600;
+        }
+        
+        .learning-title-container {
+            flex: 1;
+        }
+        
+        .learning-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .learning-subtitle {
+            color: var(--secondary);
+            font-size: 16px;
+        }
+        
+        .learning-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .learning-text {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .learning-highlights {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .learning-highlight-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .learning-list {
+            list-style-type: none;
+        }
+        
+        .learning-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .learning-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+        
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .profile-photo {
-                width: 100px;
-                height: 100px;
-                bottom: -50px;
+            .container {
+                padding: 20px 15px;
             }
             
-            .profile-info {
-                padding: 60px 20px 20px;
+            .case-sections {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
             
-            .experience-header {
+            .outcome-section {
+                grid-column: span 1;
+            }
+            
+            .outcome-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .flow-chart {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .flow-item {
+                margin: 5px 0;
+            }
+            
+            .flow-line {
+                display: none;
+            }
+            
+            .model-items {
                 flex-direction: column;
             }
             
-            .company-logo {
-                margin-bottom: 15px;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
-            
-            .footer-content {
-                flex-direction: column;
-            }
-            
-            .footer-links {
-                margin-top: 15px;
-            }
-            
-            .footer-links a {
-                margin: 0 10px;
+            .learning-content {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>Timothy Sharp</h1>
+    <div class="container">
+        <h1>Business Case Studies</h1>
+        
+        <!-- Case Study 1 -->
+        <div class="case-study">
+            <div class="case-header">
+                <div class="case-number">1</div>
+                <div class="case-title-container">
+                    <h2 class="case-title">Expanding Pediatric Device Sales Across EMEA</h2>
+                    <p class="case-subtitle">Strategic market entry and distribution network development for MD Orthopaedics</p>
+                </div>
+            </div>
+            
+            <div class="case-sections">
+                <div class="business-case-section">
+                    <div class="section-header">Business Challenge</div>
+                    <div class="section-content">
+                        MD Orthopaedics, a global leader in Ponseti Method clubfoot orthoses and splints, needed to establish and expand their presence across diverse EMEA healthcare markets, each with unique regulatory frameworks and reimbursement models.
+                    </div>
+                </div>
+                
+                <div class="business-case-section">
+                    <div class="section-header">Solution Implementation</div>
+                    <div class="section-content">
+                        As EMEA Sales Representative & Business Analyst, managed sales operations and distributor networks, conducted TAM/SAM/SOM assessments, and aligned pricing with regional regulatory requirements and reimbursement frameworks.
+                    </div>
+                </div>
+                
+                <div class="business-case-section outcome-section">
+                    <div class="section-header outcome-header">Business Outcomes & Impact</div>
+                    <div class="section-content outcome-content">
+                        <div>
+                            <div class="outcome-metric">33% year-over-year sales growth in key international markets</div>
+                            <div class="outcome-metric">Established scalable distributor partnerships for long-term market stability</div>
+                        </div>
+                        <div>
+                            <div class="outcome-metric">Strengthened regional presence across multiple EMEA markets</div>
+                            <div class="outcome-metric">Improved market access for pediatric mobility solutions</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="visual-container">
+                <div class="visual-header">
+                    <h3 class="visual-title">Path to Market Strategy Framework</h3>
+                </div>
+                <div class="visual-content">
+                    <div class="flow-chart">
+                        <div class="flow-line"></div>
+                        <div class="flow-item">Market Sizing</div>
+                        <div class="flow-item">Distributor Selection</div>
+                        <div class="flow-item">Pricing Strategy</div>
+                        <div class="flow-item">Reimbursement Alignment</div>
+                        <div class="flow-item">Market Penetration</div>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
-
-    <div class="main-content">
-        <div class="container">
-            <div class="profile-card">
-                <div class="cover-photo"></div>
-                <div class="profile-photo">TS</div>
-                <div class="profile-info">
-                    <h2>Timothy Sharp</h2>
-                    <p class="headline">Business Consultant | Medical Device & Industrial Distribution | Data-Driven Business Strategy</p>
-                    <p class="location">Norman, OK | Open to Remote & Hybrid Roles in North America & EMEA</p>
-                    
-                    <div class="section-title">
-                        <h3>About</h3>
-                    </div>
-                    <p>Strategic business consultant with proven leadership in overseeing EMEA sales networks and distributor partnerships within the Orthotics & Prosthetics (O&P) and medical device sectors. Expertise in building sustainable sales channels for pediatric medical devices, driving market expansion, and integrating supply chain, sales, and data analytics to optimize revenue growth.</p>
+        
+        <!-- Case Study 2 -->
+        <div class="case-study">
+            <div class="case-header">
+                <div class="case-number">2</div>
+                <div class="case-title-container">
+                    <h2 class="case-title">Forecasting & Sales Planning Enablement</h2>
+                    <p class="case-subtitle">Cross-functional alignment for operational excellence and revenue growth</p>
                 </div>
             </div>
             
-            <div class="section-title">
-                <h3>Featured Case Studies</h3>
-            </div>
-            
-            <!-- Case Study 1 -->
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div class="company-logo">MDO</div>
-                    <div class="experience-company">
-                        <h4>EMEA Market Expansion: Pediatric Orthopedic Devices</h4>
-                        <p>MD Orthopaedics (via Blue Channel Media)</p>
-                        <p class="duration">2018 - 2023</p>
+            <div class="case-sections">
+                <div class="business-case-section">
+                    <div class="section-header">Business Challenge</div>
+                    <div class="section-content">
+                        Medical device businesses needed to improve forecast reliability and unify planning across sales, supply chain management, and finance teams to enhance revenue predictability and optimize resource allocation.
                     </div>
                 </div>
                 
-                <div class="experience-details">
-                    <div class="experience-description">
-                        <p>Led comprehensive distributor network expansion and sales growth for MD Orthopaedics, a global leader in Ponseti Method clubfoot orthoses, splints, and AFO (Ankle-Foot Orthosis) products. The project focused on building sustainable sales channels across EMEA, UK, MEA, and APAC regions while aligning pricing models with regional regulatory requirements. This enterprise lifecycle positioning initiative established infrastructure that positioned the company to generate millions in long-term revenue potential.</p>
-                        
-                        <h5>Project Scope</h5>
-                        <ul>
-                            <li>Managed sales operations and distributor networks across multiple international markets</li>
-                            <li>Developed market access strategies to increase pediatric mobility solutions penetration</li>
-                            <li>Created financial models and revenue forecasting systems to improve budgeting accuracy</li>
-                            <li>Designed sales segmentation models to optimize go-to-market strategies</li>
-                            <li>Led cross-functional collaboration between supply chain, finance, and sales teams</li>
-                        </ul>
-                        
-                        <div class="skills-used">
-                            <span class="skill-tag">International Sales</span>
-                            <span class="skill-tag">Distributor Management</span>
-                            <span class="skill-tag">Market Access</span>
-                            <span class="skill-tag">Financial Modeling</span>
-                            <span class="skill-tag">Revenue Forecasting</span>
-                            <span class="skill-tag">Pricing Strategy</span>
-                            <span class="skill-tag">Go-To-Market Planning</span>
-                        </div>
-                    </div>
-                    
-                    <div class="results-section">
-                        <h5>Results & Impact</h5>
-                        <ul>
-                            <li>Achieved 33% year-over-year sales growth in key international markets</li>
-                            <li>Established scalable distributor partnerships for AFO products, positioning the company for millions in potential revenue through increased long-term market stability</li>
-                            <li>Enhanced pricing models and reimbursement strategies, improving commercial viability</li>
-                            <li>Expanded market presence for pediatric orthopedic devices across EMEA region</li>
-                            <li>Improved revenue predictability through advanced forecasting methodologies</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="visualization">
-                        <h5 class="viz-title">EMEA Sales Growth Trajectory</h5>
-                        <div class="viz-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="100%">
-                                <!-- Background -->
-                                <rect width="800" height="300" fill="#f8f9fa" />
-                                
-                                <!-- Chart Area -->
-                                <rect x="50" y="50" width="700" height="200" fill="white" stroke="#ddd" />
-                                
-                                <!-- Grid Lines -->
-                                <line x1="50" y1="90" x2="750" y2="90" stroke="#ddd" stroke-width="1" />
-                                <line x1="50" y1="130" x2="750" y2="130" stroke="#ddd" stroke-width="1" />
-                                <line x1="50" y1="170" x2="750" y2="170" stroke="#ddd" stroke-width="1" />
-                                <line x1="50" y1="210" x2="750" y2="210" stroke="#ddd" stroke-width="1" />
-                                
-                                <!-- X-Axis -->
-                                <line x1="50" y1="250" x2="750" y2="250" stroke="#333" stroke-width="2" />
-                                
-                                <!-- Year Labels -->
-                                <text x="121" y="270" text-anchor="middle" font-size="12">2018</text>
-                                <text x="192" y="270" text-anchor="middle" font-size="12">2019</text>
-                                <text x="264" y="270" text-anchor="middle" font-size="12">2020</text>
-                                <text x="335" y="270" text-anchor="middle" font-size="12">2021</text>
-                                <text x="407" y="270" text-anchor="middle" font-size="12">2022</text>
-                                <text x="478" y="270" text-anchor="middle" font-size="12">2023</text>
-                                
-                                <!-- Y-Axis -->
-                                <line x1="50" y1="50" x2="50" y2="250" stroke="#333" stroke-width="2" />
-                                
-                                <!-- Y-Axis Labels -->
-                                <text x="40" y="250" text-anchor="end" font-size="12">0</text>
-                                <text x="40" y="210" text-anchor="end" font-size="12">25%</text>
-                                <text x="40" y="170" text-anchor="end" font-size="12">50%</text>
-                                <text x="40" y="130" text-anchor="end" font-size="12">75%</text>
-                                <text x="40" y="90" text-anchor="end" font-size="12">100%</text>
-                                <text x="40" y="50" text-anchor="end" font-size="12">125%</text>
-                                
-                                <!-- Region 1 (EMEA) -->
-                                <polyline points="121,210 192,190 264,155 335,120 407,90 478,70" 
-                                          fill="none" stroke="#0a66c2" stroke-width="3" />
-                                
-                                <!-- Region 2 (UK) -->
-                                <polyline points="121,220 192,200 264,175 335,150 407,130 478,100" 
-                                          fill="none" stroke="#ff7e5f" stroke-width="3" />
-                                          
-                                <!-- Region 3 (MEA) -->
-                                <polyline points="121,230 192,210 264,185 335,160 407,145 478,120" 
-                                          fill="none" stroke="#4CAF50" stroke-width="3" />
-                                
-                                <!-- Data Points - Region 1 -->
-                                <circle cx="121" cy="210" r="5" fill="#0a66c2" />
-                                <circle cx="192" cy="190" r="5" fill="#0a66c2" />
-                                <circle cx="264" cy="155" r="5" fill="#0a66c2" />
-                                <circle cx="335" cy="120" r="5" fill="#0a66c2" />
-                                <circle cx="407" cy="90" r="5" fill="#0a66c2" />
-                                <circle cx="478" cy="70" r="5" fill="#0a66c2" />
-                                
-                                <!-- Data Points - Region 2 -->
-                                <circle cx="121" cy="220" r="5" fill="#ff7e5f" />
-                                <circle cx="192" cy="200" r="5" fill="#ff7e5f" />
-                                <circle cx="264" cy="175" r="5" fill="#ff7e5f" />
-                                <circle cx="335" cy="150" r="5" fill="#ff7e5f" />
-                                <circle cx="407" cy="130" r="5" fill="#ff7e5f" />
-                                <circle cx="478" cy="100" r="5" fill="#ff7e5f" />
-                                
-                                <!-- Data Points - Region 3 -->
-                                <circle cx="121" cy="230" r="5" fill="#4CAF50" />
-                                <circle cx="192" cy="210" r="5" fill="#4CAF50" />
-                                <circle cx="264" cy="185" r="5" fill="#4CAF50" />
-                                <circle cx="335" cy="160" r="5" fill="#4CAF50" />
-                                <circle cx="407" cy="145" r="5" fill="#4CAF50" />
-                                <circle cx="478" cy="120" r="5" fill="#4CAF50" />
-                                
-                                <!-- Chart Title -->
-                                <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Regional Sales Growth (Base Year: 2018)</text>
-                                
-                                <!-- Legend -->
-                                <circle cx="600" y="20" r="5" fill="#0a66c2" />
-                                <text x="610" y="24" font-size="12">EMEA Region</text>
-                                <circle cx="600" y="40" r="5" fill="#ff7e5f" />
-                                <text x="610" y="44" font-size="12">UK Region</text>
-                                <circle cx="600" y="60" r="5" fill="#4CAF50" />
-                                <text x="610" y="64" font-size="12">MEA Region</text>
-                            </svg>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial">
-                        <p>"Timothy's strategic approach to expanding our distributor network across EMEA was instrumental in our international growth. His ability to combine market insights with data-driven sales strategies helped us achieve consistent year-over-year growth even during challenging global conditions."</p>
-                        <p class="testimonial-author">— Luke Mitchell, General Manager, MD Orthopaedics</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Case Study 2 -->
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div class="company-logo">TAS</div>
-                    <div class="experience-company">
-                        <h4>Revenue Growth Strategy & Business Transformation</h4>
-                        <p>TAS Business Solutions, LLC</p>
-                        <p class="duration">2020 - 2023</p>
+                <div class="business-case-section">
+                    <div class="section-header">Solution Implementation</div>
+                    <div class="section-content">
+                        Developed data-driven sales forecasting models, created business intelligence dashboards to monitor sales KPIs, and implemented integrated team alignment processes to streamline operations across previously siloed departments.
                     </div>
                 </div>
                 
-                <div class="experience-details">
-                    <div class="experience-description">
-                        <p>Led a comprehensive business transformation initiative for medical device and industrial distribution clients, with specific focus on AFO (Ankle-Foot Orthosis) products. The work encompassed sales distribution network restructuring, financial forecasting improvements, and streamlined go-to-market strategies in high-growth regions. This strategic enterprise lifecycle positioning initiative created a foundation that enabled the company to realize millions in potential revenue through optimized distribution channels and market penetration.</p>
-                        
-                        <h5>Project Scope</h5>
-                        <ul>
-                            <li>Developed data-driven sales forecasting models to improve revenue predictability</li>
-                            <li>Conducted TAM, SAM, SOM market assessments to evaluate commercial potential</li>
-                            <li>Designed pricing and reimbursement models for orthotic and prosthetic solutions</li>
-                            <li>Implemented business intelligence dashboards to monitor sales KPIs</li>
-                            <li>Managed cross-functional teams across supply chain, sales, and data analytics</li>
-                        </ul>
-                        
-                        <div class="skills-used">
-                            <span class="skill-tag">Business Transformation</span>
-                            <span class="skill-tag">Revenue Forecasting</span>
-                            <span class="skill-tag">Market Assessment</span>
-                            <span class="skill-tag">Pricing Strategy</span>
-                            <span class="skill-tag">Business Intelligence</span>
-                            <span class="skill-tag">Supply Chain Management</span>
-                            <span class="skill-tag">Data Analytics</span>
+                <div class="business-case-section outcome-section">
+                    <div class="section-header outcome-header">Business Outcomes & Impact</div>
+                    <div class="section-content outcome-content">
+                        <div>
+                            <div class="outcome-metric">$1.4M+ revenue growth by optimizing sales and distribution strategies</div>
+                            <div class="outcome-metric">Improved decision-making through enhanced data visibility</div>
                         </div>
-                    </div>
-                    
-                    <div class="results-section">
-                        <h5>Results & Impact</h5>
-                        <ul>
-                            <li>Generated $1.4M+ in revenue growth through optimized sales and distribution strategies</li>
-                            <li>Expanded distributor network, improving market penetration for pediatric orthopedic devices, particularly AFO products</li>
-                            <li>Increased sales efficiency and revenue predictability through improved demand forecasting</li>
-                            <li>Enhanced financial planning accuracy with more reliable projections</li>
-                            <li>Streamlined go-to-market approaches for faster market entry</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="visualization">
-                        <h5 class="viz-title">Market Opportunity Analysis</h5>
-                        <div class="viz-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="100%">
-                                <!-- Background -->
-                                <rect width="800" height="300" fill="#f8f9fa" />
-                                
-                                <!-- TAM Circle (Largest) -->
-                                <circle cx="400" cy="150" r="140" fill="#e7f0f7" stroke="#0a66c2" stroke-width="2" />
-                                
-                                <!-- SAM Circle (Medium) -->
-                                <circle cx="400" cy="150" r="90" fill="#afd1ea" stroke="#0a66c2" stroke-width="2" />
-                                
-                                <!-- SOM Circle (Smallest) -->
-                                <circle cx="400" cy="150" r="40" fill="#0a66c2" stroke="#0a66c2" stroke-width="2" />
-                                
-                                <!-- Labels -->
-                                <text x="400" y="85" text-anchor="middle" font-size="14">TAM: $450M</text>
-                                <text x="400" y="140" text-anchor="middle" font-size="14">SAM: $120M</text>
-                                <text x="400" y="155" text-anchor="middle" font-size="12" fill="white">SOM: $28M</text>
-                                
-                                <!-- Title -->
-                                <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Pediatric Orthopedic Devices Market Analysis</text>
-                                
-                                <!-- Legend -->
-                                <rect x="580" y="240" width="15" height="15" fill="#e7f0f7" stroke="#0a66c2" stroke-width="1" />
-                                <text x="600" y="252" font-size="12">TAM: Total Addressable Market</text>
-                                <rect x="580" y="260" width="15" height="15" fill="#afd1ea" stroke="#0a66c2" stroke-width="1" />
-                                <text x="600" y="272" font-size="12">SAM: Serviceable Available Market</text>
-                                <rect x="580" y="280" width="15" height="15" fill="#0a66c2" stroke="#0a66c2" stroke-width="1" />
-                                <text x="600" y="292" font-size="12">SOM: Serviceable Obtainable Market</text>
-                            </svg>
+                        <div>
+                            <div class="outcome-metric">Reduced operational challenges with better planning</div>
+                            <div class="outcome-metric">Established shared operational rhythm across teams</div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Case Study 3 -->
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div class="company-logo">LM</div>
-                    <div class="experience-company">
-                        <h4>Supply Chain Optimization & Procurement Strategy</h4>
-                        <p>Lockheed Martin (via Adecco)</p>
-                        <p class="duration">2017 - 2018</p>
-                    </div>
+            <div class="visual-container">
+                <div class="visual-header">
+                    <h3 class="visual-title">Process Transformation Assessment</h3>
+                </div>
+                <div class="visual-content">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Before Implementation</th>
+                                <th>After Implementation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Manual Excel forecasts</td>
+                                <td>Dashboard with live KPIs</td>
+                            </tr>
+                            <tr>
+                                <td>Isolated teams</td>
+                                <td>Cross-functional planning rhythm</td>
+                            </tr>
+                            <tr>
+                                <td>Frequent surprises</td>
+                                <td>Aligned forecast + execution</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Current Learning Initiative -->
+        <div class="learning-initiative">
+            <div class="learning-header">
+                <div class="learning-icon">AI</div>
+                <div class="learning-title-container">
+                    <h2 class="learning-title">Current Learning Initiative: AI Forecasting Model</h2>
+                    <p class="learning-subtitle">McCombs School of Business (March - August 2025)</p>
+                </div>
+            </div>
+            
+            <div class="learning-content">
+                <div class="learning-text">
+                    <p>As part of the Post Graduate Program in AI for Leaders (PGPAIFL) at Texas McCombs School of Business, I'm currently developing advanced predictive analytics capabilities focused on sales forecasting and supply chain optimization. This ongoing project addresses the limitations of traditional forecasting methods in capturing market volatility and complex variable relationships.</p>
+                    <p>The capstone project involves building a machine learning model using synthetic sales data, creating visualization dashboards, and developing mathematical modeling techniques to enhance business decision support.</p>
                 </div>
                 
-                <div class="experience-details">
-                    <div class="experience-description">
-                        <p>Managed a comprehensive logistics and procurement operation for military contracts, focusing on supply chain efficiency, inventory optimization, and compliance with strict regulatory requirements.</p>
+                <div class="learning-highlights">
+                    <h3 class="learning-highlight-title">Project Focus Areas:</h3>
+                    <ul class="learning-list">
+                        <li>Predictive Analytics for Sales & Demand Forecasting</li>
+                        <li>Data-Driven Market Opportunity Analysis</li>
+                        <li>Supply Chain Optimization Algorithms</li>
+                        <li>Business Intelligence Dashboard Development</li>
+                        <li>Machine Learning Model Validation & Testing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="visual-container">
+                <div class="visual-header">
+                    <h3 class="visual-title">AI Forecasting System Architecture (In Development)</h3>
+                </div>
+                <div class="visual-content">
+                    <div class="model-container">
+                        <div class="model-section">
+                            <div class="model-label">INPUTS:</div>
+                            <div class="model-items">
+                                <div class="model-item">Sales Data</div>
+                                <div class="model-item">Market Signals</div>
+                                <div class="model-item">Distributor Readiness</div>
+                            </div>
+                        </div>
                         
-                        <h5>Project Scope</h5>
-                        <ul>
-                            <li>Managed $15M+ in military procurement processes</li>
-                            <li>Analyzed inventory tracking procedures and implemented improvements</li>
-                            <li>Developed data-driven procurement strategies to reduce operational inefficiencies</li>
-                            <li>Enhanced inventory forecasting methodologies to minimize stockouts</li>
-                            <li>Streamlined return procedures and product lifecycle management</li>
-                        </ul>
+                        <div class="model-arrow">↓</div>
                         
-                        <div class="skills-used">
-                            <span class="skill-tag">Procurement</span>
-                            <span class="skill-tag">Supply Chain Management</span>
-                            <span class="skill-tag">Inventory Forecasting</span>
-                            <span class="skill-tag">Data Analysis</span>
-                            <span class="skill-tag">Process Improvement</span>
+                        <div class="model-section">
+                            <div class="model-label">MODEL:</div>
+                            <div class="model-items">
+                                <div class="model-item model-engine">AI Forecast Engine</div>
+                            </div>
+                        </div>
+                        
+                        <div class="model-arrow">↓</div>
+                        
+                        <div class="model-section">
+                            <div class="model-label">OUTPUTS:</div>
+                            <div class="model-items">
+                                <div class="model-item">Confidence-Banded Forecast</div>
+                                <div class="model-item">Strategic Alerts</div>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="results-section">
-                        <h5>Results & Impact</h5>
-                        <ul>
-                            <li>Improved procurement efficiency, reducing operational costs</li>
-                            <li>Enhanced inventory forecasting accuracy, minimizing stockouts and delays</li>
-                            <li>Streamlined return processes, improving resource utilization</li>
-                            <li>Maintained strict compliance with military procurement regulations</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="visualization">
-                        <h5 class="viz-title">Inventory Optimization Impact</h5>
-                        <div class="viz-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="100%">
-                                <!-- Background -->
-                                <rect width="800" height="300" fill="#f8f9fa" />
-                                
-                                <!-- Chart Area -->
-                                <rect x="50" y="50" width="700" height="200" fill="white" stroke="#ddd" />
-                                
-                                <!-- Title -->
-                                <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Supply Chain Optimization Results</text>
-                                <text x="400" y="280" text-anchor="middle" font-size="12" font-style="italic">Note: Specific metrics confidential - Relative improvements shown</text>
-                                
-                                <!-- Legend -->
-                                <rect x="150" y="80" width="15" height="15" fill="#d9d9d9" />
-                                <text x="170" y="92" font-size="12">Before Optimization</text>
-                                <rect x="350" y="80" width="15" height="15" fill="#0a66c2" />
-                                <text x="370" y="92" font-size="12">After Optimization</text>
-                                
-                                <!-- Three Key Improvement Areas -->
-                                <text x="180" y="130" text-anchor="middle" font-size="14" font-weight="bold">Inventory Costs</text>
-                                <text x="400" y="130" text-anchor="middle" font-size="14" font-weight="bold">Stockout Incidents</text>
-                                <text x="620" y="130" text-anchor="middle" font-size="14" font-weight="bold">Processing Time</text>
-                                
-                                <!-- Down Arrows for Cost Reduction -->
-                                <path d="M180,155 L160,175 L170,175 L170,200 L190,200 L190,175 L200,175 Z" fill="#0a66c2" />
-                                <text x="180" y="220" text-anchor="middle" font-size="14">Significant</text>
-                                <text x="180" y="240" text-anchor="middle" font-size="14">Reduction</text>
-                                
-                                <!-- Down Arrows for Stockout Reduction -->
-                                <path d="M400,155 L380,175 L390,175 L390,200 L410,200 L410,175 L420,175 Z" fill="#0a66c2" />
-                                <text x="400" y="220" text-anchor="middle" font-size="14">Substantial</text>
-                                <text x="400" y="240" text-anchor="middle" font-size="14">Decrease</text>
-                                
-                                <!-- Down Arrows for Processing Time -->
-                                <path d="M620,155 L600,175 L610,175 L610,200 L630,200 L630,175 L640,175 Z" fill="#0a66c2" />
-                                <text x="620" y="220" text-anchor="middle" font-size="14">Notable</text>
-                                <text x="620" y="240" text-anchor="middle" font-size="14">Improvement</text>
-                            </svg>
-                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
